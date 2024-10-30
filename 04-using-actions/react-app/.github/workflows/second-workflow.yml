@@ -2,8 +2,13 @@ name: contexts
 on:
   push:
   workflow_dispatch:
-run-name: 06-contexts | DEBUG =${{inputs.debug}}
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
+
+run-name: 06-contexts | DEBUG =${{inputs.debug}}
 
 jobs:
   echo-data:
